@@ -29,5 +29,22 @@ public class LibroServiceImpl implements ILibroService{
     public Libro findByISBN(String isbn) throws LibroNotFoundException {
         Libro libro = this.libroRepo.findById(isbn).orElseThrow(LibroNotFoundException::new);
         return libro;
-      }
+    }
+
+    @Override
+    public Libro update(Libro libro) {
+        return this.libroRepo.save(libro);
+    }
+
+    @Override
+    public void delete(Libro libro) {
+        this.libroRepo.delete(libro);
+    }
+
+    @Override
+    public List<Libro> findByAutor(String autor) {
+        return this.libroRepo.findByAutor(autor);
+    }
+
+
 }

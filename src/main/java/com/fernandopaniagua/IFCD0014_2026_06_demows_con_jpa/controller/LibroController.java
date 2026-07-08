@@ -44,7 +44,7 @@ public class LibroController {
         }
     }
 
-    //READ BY ID (con retorno objeto LibroResponse)
+    //READ BY ID (con retorno objeto LibroDTO)
     @GetMapping("/libros/exception/{isbn}")
     public ResponseEntity<LibroDTO> readLibroResponseById(@PathVariable String isbn) {
         try {
@@ -56,5 +56,29 @@ public class LibroController {
     }
 
     //UPDATE
-    
+    @PutMapping("/libros")
+    public ResponseEntity<Libro> update(@RequestBody Libro libro) {
+        Libro libroActualizado = this.libroService.update(libro);
+        return ResponseEntity.ok(libroActualizado);
+    }
+
+    //DELETE
+    @DeleteMapping("/libros/{isbn}")
+    public ResponseEntity<Libro> delete(@PathVariable String isbn) {
+        try {
+            Libro libro = this.libroService.findByISBN(isbn);
+            this.libroService.delete(libro);
+            return ResponseEntity.ok(libro);
+        } catch (LibroNotFoundException lnfe) {
+            return ResponseEntity.badRequest().body(null);
+        }
+    }
+
+    //FIND BY AUTOR
+    @GetMapping("/libros/autor/{autor}")
+    public ResponseEntity<List<Libro>> findByAutor(@PathVariable String autor) {
+        List<Libro> libros = this.libroService.findByAutor(autor);
+        return ResponseEntity.ok(libros);
+    }
+
 }

@@ -9,4 +9,7 @@ public interface ILibroService {
     public Libro save(Libro libro);
     public List<Libro> findAll();
     public Libro findByISBN(String isbn) throws LibroNotFoundException;
+    public Libro update(Libro libro);
+    public void delete(Libro libro);
+    public List<Libro> findByAutor(String autor);
 }
