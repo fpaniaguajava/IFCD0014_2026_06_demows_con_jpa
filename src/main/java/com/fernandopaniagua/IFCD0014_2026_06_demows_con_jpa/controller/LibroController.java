@@ -17,13 +17,13 @@ public class LibroController {
 
     //CREATE
     @PostMapping("/libros")
-    public Libro save(@RequestBody Libro libro) {
+    public Libro create(@RequestBody Libro libro) {
         return this.libroService.save(libro);
     }
 
     //READ ALL
     @GetMapping("/libros")
-    public List<Libro> findAll() {
+    public List<Libro> readAll() {
         return this.libroService.findAll();
     }
 }
