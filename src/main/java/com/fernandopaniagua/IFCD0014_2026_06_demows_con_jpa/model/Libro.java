@@ -1,8 +1,6 @@
 package com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
