@@ -10,6 +10,11 @@ import java.util.List;
 @Service
 public class LibroServiceImpl implements ILibroService{
     private ILibroRepo libroRepo;
+
+    public void fake(){
+        this.libroRepo.buscarLibrosConTexto("Unity");
+    }
+
     public LibroServiceImpl(ILibroRepo libroRepo) {
         this.libroRepo = libroRepo;
     }
