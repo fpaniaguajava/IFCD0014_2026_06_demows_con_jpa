@@ -17,4 +17,9 @@ public interface ILibroRepo extends JpaRepository<Libro, String> {
     public List<Libro> findByTituloContaining(String cadena);
     public List<Libro> findByAutorContaining(String cadena);
 
+    public List<Libro> findTop100ByAutorAndTituloContainingAndIsbnStartingWithOrderByIsbnAsc(
+            String autor,
+            String texto,
+            String isbn
+    );
 }

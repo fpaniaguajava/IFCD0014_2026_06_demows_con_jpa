@@ -10,20 +10,17 @@ import java.util.List;
 @Service
 public class LibroServiceImpl implements ILibroService{
     private ILibroRepo libroRepo;
-
-    public void fake(){
-        this.libroRepo.buscarLibrosConTexto("Unity");
-    }
-
     public LibroServiceImpl(ILibroRepo libroRepo) {
         this.libroRepo = libroRepo;
     }
 
+    //CREATE
     @Override
     public Libro save(Libro libro) {
         return this.libroRepo.save(libro);
     }
 
+    //READ
     @Override
     public List<Libro> findAll() {
         return this.libroRepo.findAll();
@@ -35,16 +32,19 @@ public class LibroServiceImpl implements ILibroService{
         return libro;
     }
 
+    //UPDATE
     @Override
     public Libro update(Libro libro) {
         return this.libroRepo.save(libro);
     }
 
+    //DELETE
     @Override
     public void delete(Libro libro) {
         this.libroRepo.delete(libro);
     }
 
+    //FIND BY AUTOR
     @Override
     public List<Libro> findByAutor(String autor) {
         return this.libroRepo.findByAutor(autor);
