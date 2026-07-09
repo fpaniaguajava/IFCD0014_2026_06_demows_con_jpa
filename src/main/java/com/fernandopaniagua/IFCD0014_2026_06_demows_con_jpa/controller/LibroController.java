@@ -1,9 +1,9 @@
 package com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.controller;
 
-import com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.exceptions.LibroNotFoundException;
+import com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.exception.LibroNotFoundException;
 import com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.model.Libro;
 import com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.dto.LibroDTO;
-import com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.services.ILibroService;
+import com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.service.ILibroService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

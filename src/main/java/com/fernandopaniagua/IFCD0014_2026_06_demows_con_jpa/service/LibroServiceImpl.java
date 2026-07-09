@@ -1,12 +1,11 @@
-package com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.services;
+package com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.service;
 
-import com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.exceptions.LibroNotFoundException;
+import com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.exception.LibroNotFoundException;
 import com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.model.Libro;
 import com.fernandopaniagua.IFCD0014_2026_06_demows_con_jpa.repository.ILibroRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class LibroServiceImpl implements ILibroService{
