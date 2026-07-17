@@ -18,6 +18,7 @@ class Ifcd0014202606DemowsConJpaApplicationTests {
 	void findAllLibros(){
 		List<Libro> libros = iLibroService.findAll();
 		System.out.println(libros);
+
 	}
 
 }
